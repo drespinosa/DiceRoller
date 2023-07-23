@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">DiceRoller</string>
+    <string name="roll">Roll</string>
+    <string name="next">Siguiente</string>
+    <string name="title_activity_main2">MainActivity2</string>
+    <string name="title_home">Inicio</string>
+    <string name="title_dashboard">Panel</string>
+    <string name="title_notifications">Notificaciones</string>
+    <string name="title_players">Juegos</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="title_login">Iniciar sesión</string>
+    <string name="title_register">Registrar</string>
+    <string name="title_reset_password">Restablecer contraseña</string>
+    <string name="name_user">Nombre de usuario</string>
+    <string name="password">Contraseña</string>
+    <string name="sign_up">Iniciar sesión</string>
+</resources>

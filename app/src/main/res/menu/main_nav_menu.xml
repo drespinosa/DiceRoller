@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_login"
+        android:icon="@drawable/ic_user_black_24dp"
+        android:title="@string/title_login" />
+
+    <item
+        android:id="@+id/navigation_register"
+        android:icon="@drawable/ic_form_black_24dp"
+        android:title="@string/title_register" />
+
+    <item
+        android:id="@+id/navigation_reset_password"
+        android:icon="@drawable/baseline_lock_person_24"
+        android:title="@string/title_reset_password" />
+
+</menu>
