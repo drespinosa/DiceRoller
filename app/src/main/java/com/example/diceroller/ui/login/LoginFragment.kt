@@ -1,17 +1,17 @@
 package com.example.diceroller.ui.login
 
+import android.content.Context.INPUT_METHOD_SERVICE
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.LinearLayout
+import android.view.inputmethod.InputMethodManager
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.widget.SearchView.OnQueryTextListener
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.diceroller.databinding.FragmentDashboardBinding
 import com.example.diceroller.databinding.FragmentLoginBinding
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -80,6 +80,7 @@ class LoginFragment() : Fragment(), OnQueryTextListener {
                 } else{
                     showErrorDialog()
                 }
+                hideKeyboard()
             }
         }
     }
@@ -96,8 +97,12 @@ class LoginFragment() : Fragment(), OnQueryTextListener {
         return false
     }
 
-
     override fun onQueryTextChange(newText: String?): Boolean {
         return true
+    }
+
+    private fun hideKeyboard() {
+        val imm = requireContext().getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
+        imm.hideSoftInputFromWindow(requireView().windowToken, 0)
     }
 }
